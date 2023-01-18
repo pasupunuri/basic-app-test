@@ -28,7 +28,7 @@ end
 
 
 get '/data' do
-  DB[:data].last(20)
+  DB[:data].order(Sequel.desc(:id)).last(100)
 end
 
 run Sinatra::Application
