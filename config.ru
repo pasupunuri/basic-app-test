@@ -30,3 +30,5 @@ end
 get '/data' do
   DB[:data].last(20)
 end
+
+run Sinatra::Application
